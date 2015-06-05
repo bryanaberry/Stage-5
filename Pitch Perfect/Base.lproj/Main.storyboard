@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BEJ-yV-m3L">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Record-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPo-yS-JMT">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Microphone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="i5h-Av-sgb"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWO-Rg-dPe">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxE-MP-UGy">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WxE-MP-UGy" secondAttribute="height" multiplier="23:20" id="pQx-7i-c2r"/>
+                                </constraints>
+                                <state key="normal" image="Stopit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="pQx-7i-c2r"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="pQx-7i-c2r"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="stopAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wCV-S6-ale"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="WxE-MP-UGy" secondAttribute="centerX" id="Jqz-gb-eLB"/>
+                            <constraint firstAttribute="centerX" secondItem="yPo-yS-JMT" secondAttribute="centerX" id="Uky-3E-mW4"/>
+                            <constraint firstAttribute="centerX" secondItem="MWO-Rg-dPe" secondAttribute="centerX" id="WHz-of-NIc"/>
+                            <constraint firstAttribute="centerY" secondItem="WxE-MP-UGy" secondAttribute="centerY" constant="-200" id="etW-KX-dLS"/>
+                            <constraint firstAttribute="centerY" secondItem="yPo-yS-JMT" secondAttribute="centerY" id="mbR-Yo-Ksm"/>
+                            <constraint firstAttribute="centerY" secondItem="MWO-Rg-dPe" secondAttribute="centerY" constant="-75" id="sEj-Y2-Hrh"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yPo-yS-JMT"/>
+                                <exclude reference="MWO-Rg-dPe"/>
+                                <exclude reference="WxE-MP-UGy"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="WHz-of-NIc"/>
+                                <exclude reference="sEj-Y2-Hrh"/>
+                                <exclude reference="Jqz-gb-eLB"/>
+                                <exclude reference="etW-KX-dLS"/>
+                                <exclude reference="Uky-3E-mW4"/>
+                                <exclude reference="mbR-Yo-Ksm"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yPo-yS-JMT"/>
+                                <include reference="MWO-Rg-dPe"/>
+                                <include reference="WxE-MP-UGy"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="WHz-of-NIc"/>
+                                <include reference="sEj-Y2-Hrh"/>
+                                <include reference="Jqz-gb-eLB"/>
+                                <include reference="etW-KX-dLS"/>
+                                <include reference="Uky-3E-mW4"/>
+                                <include reference="mbR-Yo-Ksm"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Record" id="TeG-B1-SpM"/>
+                    <connections>
+                        <outlet property="Recordinginprogress" destination="MWO-Rg-dPe" id="bCJ-3T-Dob"/>
+                        <outlet property="recordButton" destination="yPo-yS-JMT" id="TM1-EY-pao"/>
+                        <outlet property="stopButton" destination="WxE-MP-UGy" id="Eog-Ue-LdW"/>
+                        <segue destination="Yjg-lZ-vsP" kind="show" identifier="stopRecording" id="t51-xi-347"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129.5" y="-467"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mes-TY-ydf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BEJ-yV-m3L" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Il-eQ-dE1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="dJW-13-XJs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l8O-UU-5jM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282" y="-467"/>
+        </scene>
+        <!--Play Sound View Controller-->
+        <scene sceneID="Qrz-08-DyP">
+            <objects>
+                <viewController id="Yjg-lZ-vsP" customClass="PlaySoundViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SHp-5q-k3G"/>
+                        <viewControllerLayoutGuide type="bottom" id="tzf-To-8Sb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zFu-kp-L47">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9G2-7w-GkB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Snail">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAudio:" destination="Yjg-lZ-vsP" eventType="touchUpInside" id="gMM-Kz-cOI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h62-gc-elE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="rabbit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fastplay:" destination="Yjg-lZ-vsP" eventType="touchUpInside" id="E6R-dE-8eX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWv-u4-ADb">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="smallstop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Stop:" destination="Yjg-lZ-vsP" eventType="touchUpInside" id="GBz-dV-f37"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9G2-7w-GkB" firstAttribute="top" secondItem="h62-gc-elE" secondAttribute="top" id="5Oc-dP-UGT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h62-gc-elE" secondAttribute="trailing" constant="-16" id="ExW-yn-a98"/>
+                            <constraint firstItem="tzf-To-8Sb" firstAttribute="top" secondItem="iWv-u4-ADb" secondAttribute="bottom" constant="65" id="Quk-Oy-Tiq"/>
+                            <constraint firstItem="iWv-u4-ADb" firstAttribute="leading" secondItem="zFu-kp-L47" secondAttribute="leading" constant="150" id="aNE-Do-Rvo"/>
+                            <constraint firstItem="h62-gc-elE" firstAttribute="top" secondItem="SHp-5q-k3G" secondAttribute="bottom" constant="40" id="aYA-9g-RBa"/>
+                            <constraint firstItem="9G2-7w-GkB" firstAttribute="leading" secondItem="zFu-kp-L47" secondAttribute="leadingMargin" constant="-12" id="hqG-0T-Zln"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="9G2-7w-GkB"/>
+                                <exclude reference="h62-gc-elE"/>
+                                <exclude reference="iWv-u4-ADb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Quk-Oy-Tiq"/>
+                                <exclude reference="5Oc-dP-UGT"/>
+                                <exclude reference="hqG-0T-Zln"/>
+                                <exclude reference="ExW-yn-a98"/>
+                                <exclude reference="aYA-9g-RBa"/>
+                                <exclude reference="aNE-Do-Rvo"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="9G2-7w-GkB"/>
+                                <include reference="h62-gc-elE"/>
+                                <include reference="iWv-u4-ADb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Quk-Oy-Tiq"/>
+                                <include reference="5Oc-dP-UGT"/>
+                                <include reference="hqG-0T-Zln"/>
+                                <include reference="ExW-yn-a98"/>
+                                <include reference="aYA-9g-RBa"/>
+                                <include reference="aNE-Do-Rvo"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="playPause" destination="9G2-7w-GkB" id="nU1-Wb-hqY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PJ8-KD-bhv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1987.5" y="-467"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Microphone" width="100" height="100"/>
+        <image name="Snail" width="200" height="200"/>
+        <image name="Stopit" width="100" height="100"/>
+        <image name="rabbit" width="200" height="200"/>
+        <image name="smallstop" width="100" height="100"/>
+    </resources>
+</document>
